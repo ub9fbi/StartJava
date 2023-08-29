@@ -21,7 +21,7 @@ public class CalculatorTest {
             double secondNumber = scanner.nextDouble();
             calculator.setSecondNumber(secondNumber);
             System.out.println(calculator.getResult());
-            System.out.print("Хотите продолжить вычисления? [yes/no]:");
+            System.out.print("Хотите продолжить вычисления? [yes/no]12:");
         }
 
     }
