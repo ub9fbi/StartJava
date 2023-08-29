@@ -4,10 +4,6 @@ public class Calculator {
     private double firstNumber;
     private char sing;
     private double secondNumber;
-    private int result;
-
-    public Calculator() {
-    }
 
     public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
@@ -29,38 +25,33 @@ public class Calculator {
         return this.secondNumber;
     }
 
-    public int getResult() {
-        switch (this.sing) {
+    public void calc () {
+        switch (sing) {
             case '%':
-                this.result = (int)(this.firstNumber % this.secondNumber);
+                System.out.println(firstNumber % secondNumber);
                 break;
             case '*':
-                this.result = (int)(this.firstNumber * this.secondNumber);
+                System.out.println(firstNumber * secondNumber);
                 break;
             case '+':
-                this.result = (int)(this.firstNumber + this.secondNumber);
+                System.out.println(firstNumber + secondNumber);
                 break;
             case '-':
-                this.result = (int)(this.firstNumber - this.secondNumber);
+                System.out.println(firstNumber - secondNumber);
                 break;
             case '/':
-                if (this.secondNumber != 0.0) {
-                    this.result = (int)(this.firstNumber / this.secondNumber);
+                if (secondNumber != 0.0) {
+                    System.out.println(firstNumber / secondNumber);
                 }
                 break;
             case '^':
-                this.result = 1;
-
+                int result = 1;
                 for(int i = 1; (double)i <= this.secondNumber; ++i) {
-                    this.result = (int)((double)this.result * this.firstNumber);
+                    result *= firstNumber;
                 }
-
-                return this.result;
+                System.out.println(result);
             default:
                 System.out.println("Математическая операция не поддерживается");
         }
-
-        return this.result;
     }
 }
-
