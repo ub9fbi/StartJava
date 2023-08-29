@@ -4,27 +4,23 @@ public class Calculator {
     private double firstNumber;
     private char sing;
     private double secondNumber;
-
+    // записываем переменные
     public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
     }
-
     public void setSecondNumber(double secondNumber) {
         this.secondNumber = secondNumber;
     }
-
     public void setSing(char sing) {
         this.sing = sing;
     }
-
+    // возвращаем результат из переменной
     public double getFirstNumber() {
         return this.firstNumber;
     }
-
     public double getSecondNumber() {
         return this.secondNumber;
     }
-
     public void calc () {
         switch (sing) {
             case '%':
