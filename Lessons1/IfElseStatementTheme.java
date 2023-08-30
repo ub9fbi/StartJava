@@ -148,6 +148,7 @@ public class IfElseStatementTheme {
         System.out.println("Средний балл оценок: " + averageGrade);
         double averagePercentage = (historyProcent + programinProcent) / 2.0;
         System.out.println("Средний % по предметам: " + averagePercentage);
+
         System.out.println("8. Расчет годовои прибыли");
         int soldPerMonth = 15000;
         int rentOfPremises = 5000;
