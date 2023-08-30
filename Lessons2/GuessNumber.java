@@ -5,13 +5,14 @@ import java.util.Scanner;
 
     // Этот класс отвечает за игровой процесс
 public class GuessNumber {
+        private Random random;
 
         public GuessNumber() {
         }
 
         public void GuessNumber (){
 
-            private Random random;
+
             int number = random.nextInt(100) + 1;
             System.out.println("Я загадал число от 1 до 100. Попробуйте его угадать!");
             Scanner scanner = new Scanner(System.in);
