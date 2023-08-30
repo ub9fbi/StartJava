@@ -1,11 +1,11 @@
 package Lessons2;
 
 public class Jaeger {
-    String modelName; // Имя
-    String mark; // марка
-    String origin; // произхождение
-    float height; // высота
-    float weight; // вес
+    private String modelName; // Имя
+    private String mark; // марка
+    private String origin; // произхождение
+    private float height; // высота
+    private float weight; // вес
 
     public Jaeger(String modelName, String mark, String origin, float height, float weight) {
         this.modelName = modelName;
