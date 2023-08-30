@@ -1,19 +1,16 @@
 package Lessons2;
 
-public class Calculator {
+public class CalculatorConstructors {
     private double firstNumber;
     private char sing;
     private double secondNumber;
-    public void setFirstNumber(double firstNumber) {
+
+    public CalculatorConstructors(double firstNumber, char sing, double secondNumber) {
         this.firstNumber = firstNumber;
-    }
-    public void setSing(char sing) {
         this.sing = sing;
-    }
-    public void setSecondNumber(double secondNumber) {
         this.secondNumber = secondNumber;
     }
-    public void calc () {
+    public void calc() {
         switch (sing) {
             case '%':
                 System.out.println(firstNumber % secondNumber);
@@ -34,7 +31,7 @@ public class Calculator {
                 break;
             case '^':
                 int result = 1;
-                for(int i = 1; (double)i <= this.secondNumber; ++i) {
+                for (int i = 1; (double) i <= this.secondNumber; ++i) {
                     result *= firstNumber;
                 }
                 System.out.println(result);

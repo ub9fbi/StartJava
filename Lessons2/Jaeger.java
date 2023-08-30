@@ -51,7 +51,7 @@ public class Jaeger {
         return true;
     }
     public void move () {
-        System.out.println("Вы прошли 10 шаов");
+        System.out.println("Вы прошли 10 шагов");
     }
     public String scanKaiju () {
         return "nothing";
