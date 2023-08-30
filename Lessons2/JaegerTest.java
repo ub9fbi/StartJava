@@ -12,12 +12,7 @@ public class JaegerTest {
         сrimsonTyphoon.setHeight(76.2f);
         сrimsonTyphoon.setWeight(1.7f);
 
-        Jaeger gipsyDanger = new Jaeger();
-        gipsyDanger.setModelName("Gipsy Danger");
-        gipsyDanger.setMark("Mark-3");
-        gipsyDanger.setOrigin("United States of America");
-        gipsyDanger.setHeight(79.2f);
-        gipsyDanger.setWeight(1.9f);
+        Jaeger gipsyDanger = new Jaeger("Gipsy Danger","Mark-3","United States of America",79.2f,1.9f);
 
         System.out.println(сrimsonTyphoon);
         System.out.println(gipsyDanger);

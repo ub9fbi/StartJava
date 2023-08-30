@@ -7,6 +7,18 @@ public class Jaeger {
     float height; // высота
     float weight; // вес
 
+    public Jaeger(String modelName, String mark, String origin, float height, float weight) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.origin = origin;
+        this.height = height;
+        this.weight = weight;
+    }
+
+    public Jaeger() {
+
+    }
+
     public String getModelName() {
         return modelName;
     }
