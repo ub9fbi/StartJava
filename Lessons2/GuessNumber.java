@@ -18,18 +18,18 @@ public class GuessNumber {
             int number = random.nextInt(100);
 
             while (true) {
-                System.out.print(player1.getName() + " , " + " Введите число: ");
+                System.out.print(player1.getName() + ", " + "Введите число: ");
                 int num = scanner.nextInt();
                     if (num == number) {
                         System.out.println(player1.getName() + "Вы угадали число было: " + number);
                         break;
-                    } else if (num > number) {
+                    } else if (number < num) {
                         System.out.println("Число меньше вашего предположения. Попробуйте еще раз.");
                     } else {
                         System.out.println("Число больше вашего предположения. Попробуйте еще раз");
                     }
 
-                System.out.print(player2.getName() + " , " + " Введите число: ");
+                System.out.print(player2.getName() + ", " + " Введите число: ");
                 num = scanner.nextInt();
                     if (num == number) {
                         System.out.println(player2.getName() + "Вы угадали число было: " + number);
