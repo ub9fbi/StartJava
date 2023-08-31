@@ -5,33 +5,41 @@ import java.util.Scanner;
 
     // Этот класс отвечает за игровой процесс
 public class GuessNumber {
-        private Random random;
+        private Player player1;
+        private Player player2;
 
-        public GuessNumber() {
+        public GuessNumber(Player player1, Player player2) {
+            this.player1 = player1;
+            this.player2 = player2;
         }
-
-        public void GuessNumber (){
-
-
-            int number = random.nextInt(100) + 1;
-            System.out.println("Я загадал число от 1 до 100. Попробуйте его угадать!");
+        public void start() {
+            Random random = new Random();
             Scanner scanner = new Scanner(System.in);
-            boolean guessed = false;
+            int number = random.nextInt(100);
 
-            while(!guessed) {
-                System.out.print("Введите свое предположение: ");
-                int guess = scanner.nextInt();
-                if (guess == number) {
-                    System.out.println("Вы угадали! Число было " + number);
-                    guessed = true;
-                } else if (guess > number) {
-                    System.out.println("Число меньше вашего предположения. Попробуйте еще раз.");
-                } else {
-                    System.out.println("Число больше вашего предположения. Попробуйте еще раз");
-                }
+            while (true) {
+                System.out.print(player1.getName() + " , " + " Введите число: ");
+                int num = scanner.nextInt();
+                    if (num == number) {
+                        System.out.println(player1.getName() + "Вы угадали число было: " + number);
+                        break;
+                    } else if (num > number) {
+                        System.out.println("Число меньше вашего предположения. Попробуйте еще раз.");
+                    } else {
+                        System.out.println("Число больше вашего предположения. Попробуйте еще раз");
+                    }
+
+                System.out.print(player2.getName() + " , " + " Введите число: ");
+                num = scanner.nextInt();
+                    if (num == number) {
+                        System.out.println(player2.getName() + "Вы угадали число было: " + number);
+                        break;
+                    } else if (num > number) {
+                        System.out.println("Число меньше вашего предположения. Попробуйте еще раз.");
+                    } else {
+                        System.out.println("Число больше вашего предположения. Попробуйте еще раз");
+                    }
+            }
         }
-
     }
-
-}
 
