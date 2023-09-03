@@ -21,7 +21,7 @@ public class GuessNumber {
                 System.out.print(player1.getName() + ", " + "Введите число: ");
                 int num = scanner.nextInt();
                     if (num == number) {
-                        System.out.println(player1.getName() + "Вы угадали число было: " + number);
+                        System.out.println(player1.getName() + " Вы угадали число было: " + number);
                         break;
                     } else if (number < num) {
                         System.out.println("Число меньше вашего предположения. Попробуйте еще раз.");
