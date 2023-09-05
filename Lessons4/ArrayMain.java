@@ -22,11 +22,5 @@ public class ArrayMain {
         for (String string : text) {
             System.out.println(string);
         }
-
-
-
-
-
-
     }
 }
