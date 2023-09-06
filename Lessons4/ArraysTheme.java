@@ -1,7 +1,7 @@
 package Lessons4;
 
+import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
 public class ArraysTheme {
     private int[] sumNumbs;
@@ -34,21 +34,29 @@ public class ArraysTheme {
                 numbers[6] + " * " + numbers[7] + " * " + numbers[8] + " = " + R);
         System.out.println("\n");
 
-        // Удаление элементов массива
-
+        /* Удаление элементов массива */
         double[] delArrayElement = new double[15];
-
+        // заполнение массива
         for (int i = 0; i < delArrayElement.length; i++) {
             delArrayElement[i] = random.nextDouble();
         }
+        // средний индекс массива
         int avereg = delArrayElement.length/2;
-        System.out.println("Средний индекс массива: " + avereg + "\nего значение: " + delArrayElement[avereg]);
+        System.out.print("Средний индекс массива: " + avereg + "\nЕго значение: " + delArrayElement[avereg] + "\n");
 
+        // заполнение массива 0 если его элементы больше среднего элемента
         for (int i = 0; i < delArrayElement.length; i++) {
+            if (delArrayElement[i] > delArrayElement[avereg]) {
+                delArrayElement[i] = 0;
+            }
+        }
 
+        for (double str : delArrayElement) {
+            System.out.println(str);
         }
     }
 }
+
 
 
 
