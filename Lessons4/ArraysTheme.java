@@ -8,36 +8,12 @@ public class ArraysTheme {
     private int[] sumNumbs;
 
     public static void main(String[] args) {
-        System.out.println("1. Реверс значений массива");
-        int[] numbs = {1, 7, 4, 5, 2, 6, 3};
+        reversArray();
+        summElementsArray();
 
-        for (int i = 0; i < numbs.length; i++) {
-            numbs[0] = 3;
-            numbs[1] = 6;
-            numbs[2] = 2;
-            numbs[4] = 4;
-            numbs[5] = 7;
-            numbs[6] = 1;
-            System.out.print(numbs[i] + " ");
-        }
-        System.out.println("\n");
 
-        System.out.println("2. Произведение элементов массива");
+        System.out.println("Удаление элементов массива");
         Random random = new Random();
-        int numbersSize = 9;
-        int[] numbers = new int[numbersSize];
-
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = i + 1;
-        }
-        int R = numbers[0] * numbers[1] * numbers[2] * numbers[3] * numbers[4] * numbers[5] *
-                numbers[6] * numbers[7] * numbers[8];
-        System.out.print(numbers[0] + " * " + numbers[1] + " * " + numbers[2] + " * " + numbers[3]
-                + " * " + numbers[4] + " * " + numbers[5] + " * " +
-                numbers[6] + " * " + numbers[7] + " * " + numbers[8] + " = " + R);
-        System.out.println("\n");
-
-        /* Удаление элементов массива */
         int delArrayElementSize = 15;
         double[] delArrayElement = new double[delArrayElementSize];
         // заполнение массива
@@ -72,16 +48,46 @@ public class ArraysTheme {
             }
         }
         System.out.println();
-        /* Вывод алфавита лесенкой
-        проинициализируйте массив в цикле большими анг. буквами по возрастанию
-        отобразите его содержимое лесенкой в обратном порядке в следующем формате: */
+
+        System.out.println("4. Вывод алфавита лесенкой");
         char[] arraySimvol = new char[26];
         for (int i = 0; i < arraySimvol.length; i++) {
             arraySimvol[i] = (char) (i + 65);
         }
-        System.out.print((arraySimvol[0]));
-
-
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.println(45);
+            }
+            System.out.println();
+        }
+        System.out.println("\n");
     }
+    private static void reversArray() {
+        System.out.println("1. Реверс значений массива");
+        int[] numbs = {1, 7, 4, 5, 2, 6, 3};
+        System.out.println("Массив до реверса: " + Arrays.toString(numbs));
+        for (int i = 0; i < numbs.length; i++) {
+            numbs[0] = 3;
+            numbs[1] = 6;
+            numbs[2] = 2;
+            numbs[4] = 4;
+            numbs[5] = 7;
+            numbs[6] = 1;
+        }
+        System.out.print("Массив после реверса: " + Arrays.toString(numbs));
+    }
+    private static void summElementsArray() {
+        System.out.println("2. Произведение элементов массива");
+        int numbersSize = 9;
+        int[] numbers = new int[numbersSize];
 
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i + 1;
+        }
+        int R = numbers[0] * numbers[1] * numbers[2] * numbers[3] * numbers[4] * numbers[5] *
+                numbers[6] * numbers[7] * numbers[8];
+        System.out.print(numbers[0] + " * " + numbers[1] + " * " + numbers[2] + " * " + numbers[3]
+                + " * " + numbers[4] + " * " + numbers[5] + " * " +
+                numbers[6] + " * " + numbers[7] + " * " + numbers[8] + " = " + R);
+    }
 }
