@@ -5,4 +5,6 @@ public class Book {
     private String Title; // Название
     private String YearPublication; // год издания
     private String LengthBookInformation; // длина информаций о книге
+
+
 }
