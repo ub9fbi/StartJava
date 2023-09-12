@@ -6,12 +6,10 @@ import java.util.Random;
 
 public class ArraysTheme {
     public static void main(String[] args) {
-        //reversArray();
-        //System.out.println();
-        //summElementsArray();
-        //System.out.println();
+        reversArray();
+        summElementsArray();
         //deleteElementArray();
-        //System.out.println();
+        alphabetOutput();
         fillingArrayNumbers();
     }
 
@@ -28,6 +26,7 @@ public class ArraysTheme {
             numbs[6] = 1;
         }
         System.out.print("Массив после реверса: " + Arrays.toString(numbs));
+        System.out.println();
     }
 
     private static void summElementsArray() {
@@ -35,7 +34,7 @@ public class ArraysTheme {
         int numbersSize = 9;
         int[] numbers = new int[numbersSize];
 
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < numbersSize; i++) {
             numbers[i] = i + 1;
         }
         int R = numbers[0] * numbers[1] * numbers[2] * numbers[3] * numbers[4] * numbers[5] *
@@ -43,10 +42,11 @@ public class ArraysTheme {
         System.out.print(numbers[0] + " * " + numbers[1] + " * " + numbers[2] + " * " + numbers[3]
                 + " * " + numbers[4] + " * " + numbers[5] + " * " +
                 numbers[6] + " * " + numbers[7] + " * " + numbers[8] + " = " + R);
+        System.out.println();
     }
 
     private static void deleteElementArray() {
-        System.out.println("Удаление элементов массива");
+        System.out.println("3. Удаление элементов массива");
         Random random = new Random();
         int delArrayElementSize = 15;
         double[] delArrayElement = new double[delArrayElementSize];
@@ -83,7 +83,7 @@ public class ArraysTheme {
     }
 
     private static void alphabetOutput() {
-        /*System.out.println("4. Вывод алфавита лесенкой");
+        System.out.println("4. Вывод алфавита лесенкой");
         char[] arraySimvol = new char[26];
         for (int i = 0; i < arraySimvol.length; i++) {
             arraySimvol[i] = (char) (i + 65);
@@ -94,36 +94,38 @@ public class ArraysTheme {
             }
             System.out.println();
         }
-        System.out.println();*/
+        System.out.println();
     }
 
     private static void fillingArrayNumbers() {
-        System.out.println("Заполнение массива одинаковыми числами");
+        System.out.println("5. Заполнение массива одинаковыми числами");
         int[] arrayNumb = new int[30];
         Random random = new Random();
-        int index = 0;
-        while (index < 30) {
-            int randomNumber = random.nextInt(41) + 60;
-            boolean duplicate = false;
-            for (int i = 0; i < index; i++) {
-                if (arrayNumb[i] == randomNumber) {
-                    duplicate = true;
-                    break;
-                }
-            }
-            if (!duplicate) {
-                arrayNumb[index] = randomNumber;
-                index++;
-            }
-            for (int i : arrayNumb) {
-                System.out.print(i + " ");
-                if ((i + 1) % 10 == 0) {
-                    System.out.println();
-                }
-            }
+        int len = arrayNumb.length;
+
+        arrayNumb[0] = random.nextInt(60,100);
+        for (int i = 0; i < len; i++) {
+             int randomNumb = random.nextInt(60,100);
+             for (int j = 0; j < i; j++) {
+                 if (randomNumb == arrayNumb[j]) {
+                     randomNumb = -1;
+                     i--;
+                     break;
+                 }
+             }
+             if (randomNumb != -1) {
+                 arrayNumb[i] = randomNumb;
+             }
 
         }
+        Arrays.sort(arrayNumb);
+        System.out.println(Arrays.toString(arrayNumb));
+
 
     }
+
+
+
 }
+
 

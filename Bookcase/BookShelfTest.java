@@ -13,12 +13,15 @@ public class BookShelfTest {
     }
 
     private static void printMenu() {
+
     }
 
     private static void printBookshilf() {
+
     }
 
     private static int selectMenuItem() {
+
         String item = console.nextLine();
         switch (item) {
             case "1" -> saveBook();
@@ -35,6 +38,7 @@ public class BookShelfTest {
     }
 
     private static void pressEnter() {
+
     }
 
     private static void deleteBook() { // удалить книгу
